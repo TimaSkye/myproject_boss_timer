@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>393</width>
-    <height>281</height>
+    <width>313</width>
+    <height>274</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -21,15 +21,23 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>1</width>
-    <height>1</height>
+    <width>313</width>
+    <height>274</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>999</width>
-    <height>999</height>
+    <width>313</width>
+    <height>274</height>
    </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Comic Sans MS</family>
+    <pointsize>7</pointsize>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
   </property>
   <property name="windowTitle">
    <string>Таймер боссов R2 Online</string>
@@ -40,31 +48,13 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>391</width>
-      <height>277</height>
+      <width>311</width>
+      <height>275</height>
      </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Comic Sans MS</family>
-      <pointsize>7</pointsize>
-      <weight>50</weight>
-      <italic>false</italic>
-      <bold>false</bold>
-     </font>
     </property>
     <layout class="QGridLayout" name="gridLayout">
      <item row="8" column="1">
       <widget class="QPushButton" name="btn_naga">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>7</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
        <property name="text">
         <string>Нага-королева</string>
        </property>
@@ -72,15 +62,6 @@
      </item>
      <item row="6" column="1">
       <widget class="QPushButton" name="btn_pixi">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>7</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
        <property name="text">
         <string>Королева Мав</string>
        </property>
@@ -88,15 +69,6 @@
      </item>
      <item row="8" column="8">
       <widget class="QPushButton" name="btn_lancer">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>7</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
        <property name="text">
         <string>Копейщик Акрионцев</string>
        </property>
@@ -104,15 +76,6 @@
      </item>
      <item row="8" column="0">
       <widget class="QPushButton" name="btn_gvard">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>7</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
        <property name="text">
         <string>Гвардеец-Защитник</string>
        </property>
@@ -120,15 +83,6 @@
      </item>
      <item row="6" column="8">
       <widget class="QPushButton" name="btn_scare">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>7</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
        <property name="text">
         <string>Шрам</string>
        </property>
@@ -136,15 +90,6 @@
      </item>
      <item row="6" column="0">
       <widget class="QPushButton" name="btn_kurolisk">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>7</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
        <property name="text">
         <string>Лесной куролиск</string>
        </property>
@@ -152,15 +97,6 @@
      </item>
      <item row="0" column="0">
       <widget class="QPushButton" name="btn_vasilisk">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>7</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
        <property name="text">
         <string>Гигантский Василиск</string>
        </property>
@@ -168,15 +104,6 @@
      </item>
      <item row="0" column="8">
       <widget class="QPushButton" name="btn_sirena">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>7</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
        <property name="text">
         <string>Сирена</string>
        </property>
@@ -184,15 +111,6 @@
      </item>
      <item row="0" column="1">
       <widget class="QPushButton" name="btn_kuru">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>7</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
        <property name="text">
         <string>Куру</string>
        </property>
@@ -200,15 +118,6 @@
      </item>
      <item row="2" column="8">
       <widget class="QPushButton" name="btn_triton">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>7</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
        <property name="text">
         <string>Гигантский тритон</string>
        </property>
@@ -216,15 +125,6 @@
      </item>
      <item row="4" column="1">
       <widget class="QPushButton" name="btn_orc">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>7</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
        <property name="text">
         <string>Руум</string>
        </property>
@@ -232,15 +132,6 @@
      </item>
      <item row="3" column="8">
       <widget class="QPushButton" name="btn_troll">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>7</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
        <property name="text">
         <string>Большой тролль-воин</string>
        </property>
@@ -248,15 +139,6 @@
      </item>
      <item row="3" column="1">
       <widget class="QPushButton" name="btn_ogr">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>7</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
        <property name="text">
         <string>Огр-воин</string>
        </property>
@@ -264,15 +146,6 @@
      </item>
      <item row="5" column="0">
       <widget class="QPushButton" name="btn_kobold">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>7</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
        <property name="text">
         <string>Командир кобольдов</string>
        </property>
@@ -280,79 +153,13 @@
      </item>
      <item row="4" column="0">
       <widget class="QPushButton" name="btn_kaballo">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>7</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
        <property name="text">
         <string>Кабалло</string>
        </property>
       </widget>
      </item>
-     <item row="2" column="0">
-      <widget class="QPushButton" name="pushButton_5">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>7</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>PushButton</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="0">
-      <widget class="QPushButton" name="pushButton_4">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>7</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>PushButton</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QPushButton" name="pushButton_9">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>7</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>PushButton</string>
-       </property>
-      </widget>
-     </item>
      <item row="4" column="8">
       <widget class="QPushButton" name="btn_flind">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>7</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
        <property name="text">
         <string>Флинд мечник</string>
        </property>
@@ -360,15 +167,6 @@
      </item>
      <item row="1" column="0">
       <widget class="QPushButton" name="btn_garpy">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>7</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
        <property name="text">
         <string>Королева Гарпий</string>
        </property>
@@ -376,15 +174,6 @@
      </item>
      <item row="2" column="0">
       <widget class="QPushButton" name="btn_gigant">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>7</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
        <property name="text">
         <string>Вождь Гигантов</string>
        </property>
@@ -392,15 +181,6 @@
      </item>
      <item row="2" column="1">
       <widget class="QPushButton" name="btn_minotaur">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>7</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
        <property name="text">
         <string>Минотавр-воин</string>
        </property>
@@ -408,47 +188,13 @@
      </item>
      <item row="5" column="8">
       <widget class="QPushButton" name="btn_chabon">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>7</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
        <property name="text">
         <string>Чабон</string>
        </property>
       </widget>
      </item>
      <item row="3" column="0">
-      <widget class="QPushButton" name="pushButton_8">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>7</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>PushButton</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="0">
       <widget class="QPushButton" name="btn_bug">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>7</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
        <property name="text">
         <string>Стальной жук</string>
        </property>
@@ -456,15 +202,6 @@
      </item>
      <item row="1" column="1">
       <widget class="QPushButton" name="btn_leprikon">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>7</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
        <property name="text">
         <string>Король Ракум</string>
        </property>
@@ -472,15 +209,6 @@
      </item>
      <item row="1" column="8">
       <widget class="QPushButton" name="btn_skelet">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>7</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
        <property name="text">
         <string>Крепкий скелет</string>
        </property>
@@ -488,15 +216,6 @@
      </item>
      <item row="5" column="1">
       <widget class="QPushButton" name="btn_spider">
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>7</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
        <property name="text">
         <string>Паук-птицеев</string>
        </property>
@@ -505,12 +224,7 @@
      <item row="9" column="1">
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
-        <widget class="QLabel" name="label_2">
-         <property name="font">
-          <font>
-           <family>Comic Sans MS</family>
-          </font>
-         </property>
+        <widget class="QLabel" name="label_next_info">
          <property name="text">
           <string>Следующий</string>
          </property>
@@ -530,7 +244,9 @@
         <widget class="QLabel" name="label_next">
          <property name="font">
           <font>
-           <family>Comic Sans MS</family>
+           <pointsize>6</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
           </font>
          </property>
          <property name="text">
@@ -546,12 +262,7 @@
      <item row="9" column="0">
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="QLabel" name="label_1">
-         <property name="font">
-          <font>
-           <family>Comic Sans MS</family>
-          </font>
-         </property>
+        <widget class="QLabel" name="label_now_info">
          <property name="text">
           <string>Убит</string>
          </property>
@@ -571,7 +282,9 @@
         <widget class="QLabel" name="label_now">
          <property name="font">
           <font>
-           <family>Comic Sans MS</family>
+           <pointsize>6</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
           </font>
          </property>
          <property name="text">
@@ -587,12 +300,7 @@
      <item row="9" column="8">
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
-        <widget class="QLabel" name="label_3">
-         <property name="font">
-          <font>
-           <family>Comic Sans MS</family>
-          </font>
-         </property>
+        <widget class="QLabel" name="label__timer_info">
          <property name="text">
           <string>Таймер до следующего</string>
          </property>
@@ -612,7 +320,9 @@
         <widget class="QLabel" name="label_timer">
          <property name="font">
           <font>
-           <family>Comic Sans MS</family>
+           <pointsize>6</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
           </font>
          </property>
          <property name="text">
