@@ -3,12 +3,13 @@ import sys
 from PyQt6 import QtWidgets, QtCore
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QFont, QIcon
-from MainWindow import Ui_MainWindow  # Импортируйте ваш класс UI из Qt Designer
+from MainWindow import Ui_MainWindow
 
-myappid = 'home.boss_timer.version01'  # Любое уникальное строковое значение
+myappid = 'home.boss_timer.version01'
 ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
 
-TIMER_DURATION = 19 * 60 + 55  # 19 минут 55 секунд
+# 19 минут 55 секунд
+TIMER_DURATION = 19 * 60 + 55
 
 class ButtonTimer:
     def __init__(self, button, name, font):
