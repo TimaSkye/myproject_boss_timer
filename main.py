@@ -12,6 +12,7 @@ ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
 TIMER_DURATION = 19 * 60 + 55
 
 class ButtonTimer:
+    """Класс активации кнопки-таймера."""
     def __init__(self, button, name, font):
         self.button = button
         self.name = name
@@ -21,11 +22,13 @@ class ButtonTimer:
         self.set_text_color("black")  # По умолчанию чёрный
 
     def start(self):
+        """Запуск таймера."""
         self.remaining = TIMER_DURATION
         self.active = True
         self.set_text_color("red")
 
     def tick(self):
+        """Тик таймера. Если закончился таймер, меняем цвет текста на зеленый."""
         if self.active and self.remaining > 0:
             self.remaining -= 1
             if self.remaining == 0:
@@ -33,37 +36,40 @@ class ButtonTimer:
                 self.set_text_color("green")
 
     def is_active(self):
+        """Проверка статуса активности таймера."""
         return self.active
 
     def get_time(self):
+        """Получаем остаток времени в формате мм:сс."""
         m, s = divmod(self.remaining, 60)
         return f"{m:02d}:{s:02d}"
 
     def set_text_color(self, color):
-        # Устанавливаем цвет и шрифт
+        """Устанавливаем цвет и шрифт"""
         self.button.setFont(self.font)
         self.button.setStyleSheet(f"color: {color};")
 
 class MainWindow(QtWidgets.QMainWindow):
+    """Основное окно приложения"""
     def __init__(self):
         super().__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.setWindowFlag(Qt.WindowType.WindowStaysOnTopHint, True)
 
-        # Создаём нужный шрифт
-        font = QFont()
-        font.setFamily("Comic Sans MS")
-        font.setPointSize(7)
-        font.setBold(True)
 
-        # Список кнопок из вашего дизайна
+        # Список кнопок.
         self.button_names = [
             "btn_naga", "btn_pixi", "btn_lancer", "btn_gvard", "btn_scare", "btn_kurolisk", "btn_vasilisk",
             "btn_sirena", "btn_kuru", "btn_triton", "btn_orc", "btn_troll", "btn_ogr", "btn_kobold",
             "btn_kaballo", "btn_flind", "btn_garpy", "btn_gigant", "btn_minotaur", "btn_chabon",
             "btn_bug", "btn_leprikon", "btn_skelet", "btn_spider"
         ]
+
+        font = QFont()
+        font.setFamily("Comic Sans MS")
+        font.setPointSize(7)
+        font.setBold(True)
 
         self.timers = []
         for name in self.button_names:
@@ -81,18 +87,23 @@ class MainWindow(QtWidgets.QMainWindow):
         self.global_timer.timeout.connect(self.tick_all)
         self.global_timer.start(1000)
 
+
+
+
     def handle_button(self, timer):
-        # Только если таймер не активен — запускаем и красим в красный
+        """Только если таймер не активен — запускаем и красим в красный."""
         if not timer.is_active():
             timer.start()
             self.ui.label_now.setText(timer.name)
 
     def tick_all(self):
+        """Тикаем таймеры и обновляем информацию на экране."""
         for timer in self.timers:
             timer.tick()
         self.update_labels()
 
     def update_labels(self):
+        """Обновление лейблов на экране."""
         active_timers = [t for t in self.timers if t.is_active()]
         if active_timers:
             next_timer = min(active_timers, key=lambda t: t.remaining)
