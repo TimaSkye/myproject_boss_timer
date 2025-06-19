@@ -49,7 +49,7 @@
       <x>0</x>
       <y>0</y>
       <width>311</width>
-      <height>275</height>
+      <height>277</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
@@ -234,26 +234,12 @@
         </widget>
        </item>
        <item>
-        <widget class="Line" name="line_2">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
         <widget class="QLabel" name="label_next">
-         <property name="font">
-          <font>
-           <pointsize>6</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
          <property name="text">
           <string>Имя босса</string>
          </property>
          <property name="alignment">
-          <set>Qt::AlignCenter</set>
+          <set>Qt::AlignHCenter|Qt::AlignTop</set>
          </property>
         </widget>
        </item>
@@ -272,26 +258,12 @@
         </widget>
        </item>
        <item>
-        <widget class="Line" name="line">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
         <widget class="QLabel" name="label_now">
-         <property name="font">
-          <font>
-           <pointsize>6</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
          <property name="text">
           <string>Имя босса</string>
          </property>
          <property name="alignment">
-          <set>Qt::AlignCenter</set>
+          <set>Qt::AlignHCenter|Qt::AlignTop</set>
          </property>
         </widget>
        </item>
@@ -310,26 +282,12 @@
         </widget>
        </item>
        <item>
-        <widget class="Line" name="line_3">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
         <widget class="QLabel" name="label_timer">
-         <property name="font">
-          <font>
-           <pointsize>6</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
          <property name="text">
           <string>Таймер</string>
          </property>
          <property name="alignment">
-          <set>Qt::AlignCenter</set>
+          <set>Qt::AlignHCenter|Qt::AlignTop</set>
          </property>
         </widget>
        </item>
