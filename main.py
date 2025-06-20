@@ -91,7 +91,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
 
     def handle_button(self, timer):
-        """Только если таймер не активен — запускаем и красим в красный."""
+        """Запускаем таймер и красим в красный. Повторное нажатие перезапускает таймер."""
         timer.start()
         self.ui.label_now.setText(timer.name)
 
