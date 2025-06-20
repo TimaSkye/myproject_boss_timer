@@ -92,9 +92,8 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def handle_button(self, timer):
         """Только если таймер не активен — запускаем и красим в красный."""
-        if not timer.is_active():
-            timer.start()
-            self.ui.label_now.setText(timer.name)
+        timer.start()
+        self.ui.label_now.setText(timer.name)
 
     def tick_all(self):
         """Тикаем таймеры и обновляем информацию на экране."""
