@@ -1,18 +1,22 @@
 import ctypes
 import sys
+import threading
+import pyttsx3
 from PyQt6 import QtWidgets, QtCore
 from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QFont, QIcon
 from MainWindow import Ui_MainWindow
 
-myappid = 'boss_timer.v02'
+myappid = 'boss_timer.version02'
 ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
 
-# 19 минут 55 секунд
+# Константа таймера - 19 минут 55 секунд
 TIMER_DURATION = 19 * 60 + 55
+
 
 class ButtonTimer:
     """Класс активации кнопки-таймера."""
+
     def __init__(self, button, name, font):
         self.button = button
         self.name = name
@@ -49,14 +53,21 @@ class ButtonTimer:
         self.button.setFont(self.font)
         self.button.setStyleSheet(f"color: {color};")
 
+
 class MainWindow(QtWidgets.QMainWindow):
     """Основное окно приложения"""
+
     def __init__(self):
         super().__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.setWindowFlag(Qt.WindowType.WindowStaysOnTopHint, True)
 
+        # Инициализация голосового движка pyttsx3
+        self.engine = pyttsx3.init()
+        rate = self.engine.getProperty('rate')
+        self.engine.setProperty('rate', rate - 5)  # Замедляем скорость речи
+        self.engine.setProperty('volume', 1.0)  # Максимальная громкость
 
         # Список кнопок.
         self.button_names = [
@@ -87,17 +98,25 @@ class MainWindow(QtWidgets.QMainWindow):
         self.global_timer.timeout.connect(self.tick_all)
         self.global_timer.start(1000)
 
+    def speak_boss_name(self, name):
+        """Озвучить имя босса в отдельном потоке, чтобы не блокировать интерфейс."""
 
+        def run_speech():
+            self.engine.say(name)
+            self.engine.runAndWait()
 
+        threading.Thread(target=run_speech, daemon=True).start()
 
     def handle_button(self, timer):
-        """Запускаем таймер и красим в красный. Повторное нажатие перезапускает таймер."""
+        """При любом нажатии запускаем таймер заново и красим в красный."""
         timer.start()
         self.ui.label_now.setText(timer.name)
 
     def tick_all(self):
-        """Тикаем таймеры и обновляем информацию на экране."""
+        """Тикаем таймеры и обновляем информацию на экране, озвучиваем при 1 секунде."""
         for timer in self.timers:
+            if timer.is_active() and timer.remaining == 3:  # Предупреждение о боссе за 3 секунды до окончания таймера.
+                self.speak_boss_name(timer.name)
             timer.tick()
         self.update_labels()
 
@@ -111,6 +130,7 @@ class MainWindow(QtWidgets.QMainWindow):
         else:
             self.ui.label_next.setText("")
             self.ui.label_timer.setText("")
+
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)

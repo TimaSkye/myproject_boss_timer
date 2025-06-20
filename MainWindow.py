@@ -171,7 +171,7 @@ class Ui_MainWindow(object):
         self.btn_bug.setText(_translate("MainWindow", "Стальной жук"))
         self.btn_leprikon.setText(_translate("MainWindow", "Король Ракум"))
         self.btn_skelet.setText(_translate("MainWindow", "Крепкий скелет"))
-        self.btn_spider.setText(_translate("MainWindow", "Паук-птицеев"))
+        self.btn_spider.setText(_translate("MainWindow", "Паук-птицеед"))
         self.label_next_info.setText(_translate("MainWindow", "Следующий"))
         self.label_next.setText(_translate("MainWindow", "Имя босса"))
         self.label_now_info.setText(_translate("MainWindow", "Убит"))
