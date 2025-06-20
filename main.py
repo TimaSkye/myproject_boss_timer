@@ -5,7 +5,7 @@ from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QFont, QIcon
 from MainWindow import Ui_MainWindow
 
-myappid = 'home.boss_timer.version01'
+myappid = 'boss_timer.v02'
 ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
 
 # 19 минут 55 секунд
